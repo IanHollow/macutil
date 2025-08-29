@@ -9,10 +9,6 @@ removeAnimations() {
     printf "%b\n" "${CYAN}Setting reduce motion preference...${RC}"
     $ESCALATION_TOOL defaults write com.apple.universalaccess reduceMotion -bool true
     
-    # Disable window animations
-    printf "%b\n" "${CYAN}Disabling window animations...${RC}"
-    $ESCALATION_TOOL defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-    
     # Speed up window resize animations
     printf "%b\n" "${CYAN}Speeding up window resize animations...${RC}"
     $ESCALATION_TOOL defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
